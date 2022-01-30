@@ -18,7 +18,10 @@ $ mvn spring-boot:run <br/>
 
 swagger_ui can be accessed via https secure port 8443 from localhost : <br/>
 https://localhost:8443/customer-info/swagger-ui/index.html <br/><br/>
-![https_swagger_ui](doc/https_swagger_ui.png) <br/>
+![https_swagger_ui](doc/https_swagger_ui.png) <br/><br/>
+
+Database ER diagram : <br/>
+![https_swagger_ui](doc/cust_db_er_diagram.png) <br/><br/>
 
 ### Tech Stack
 <pre>
