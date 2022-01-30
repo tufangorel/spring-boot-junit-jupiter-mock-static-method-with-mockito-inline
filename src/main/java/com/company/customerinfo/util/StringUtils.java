@@ -6,8 +6,8 @@ public class StringUtils {
         throw new AssertionError("shouldn't be instantiated");
     }
 
-    public static boolean isEmpty(final String str) {
-        return str == null || str.length() == 0;
+    public static boolean isEmpty(final CharSequence cs) {
+        return cs == null || cs.length() == 0;
     }
 
 
