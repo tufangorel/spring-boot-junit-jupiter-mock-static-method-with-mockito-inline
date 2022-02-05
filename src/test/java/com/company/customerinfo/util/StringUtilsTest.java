@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.mockito.Mockito.anyString;
 import static org.mockito.Mockito.mockStatic;
 
@@ -28,6 +29,27 @@ public class StringUtilsTest {
 
         // After mock scope returns to usual behavior.
         assertEquals(false, StringUtils.isEmpty("abc"));
+    }
+
+
+    @Test
+    void testCapitalize() {
+
+        // before mock scope, usual behavior.
+        assertEquals("Abc", StringUtils.capitalize("abc"));
+
+        // Mock scope
+        try (MockedStatic mocked = mockStatic(StringUtils.class)) {
+
+            // Mocking
+            mocked.when(() -> StringUtils.capitalize("abc")).thenReturn("Abc");
+
+            // Mocked behavior
+            assertEquals("Abc", StringUtils.capitalize("abc"));
+        }
+
+        // After mock scope returns to usual behavior.
+        assertNotEquals("ABC", StringUtils.capitalize("abc"));
     }
 
 }
