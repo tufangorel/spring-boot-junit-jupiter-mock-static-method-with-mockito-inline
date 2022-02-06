@@ -13,7 +13,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
-        <mockito-inline.version>4.3.0</mockito-inline.version>
+        <mockito-inline.version>4.3.1</mockito-inline.version>
         <metrics-core.version>4.2.8</metrics-core.version>
         <HikariCP.version>5.0.1</HikariCP.version>
         <h2.version>2.1.210</h2.version>
