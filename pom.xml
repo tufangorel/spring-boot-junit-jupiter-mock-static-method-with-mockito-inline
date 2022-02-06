@@ -17,7 +17,7 @@
         <metrics-core.version>4.2.8</metrics-core.version>
         <HikariCP.version>5.0.1</HikariCP.version>
         <h2.version>2.1.210</h2.version>
-        <springdoc-openapi-ui.version>1.6.2</springdoc-openapi-ui.version>
+        <springdoc-openapi-ui.version>1.6.5</springdoc-openapi-ui.version>
     </properties>
 
     <parent>
