@@ -42,4 +42,17 @@ public class StringUtils {
         return cs == null ? 0 : cs.length();
     }
 
+    // From org.springframework.util.StringUtils, under Apache License 2.0
+    public static boolean containsWhitespace(final CharSequence seq) {
+        if (isEmpty(seq)) {
+            return false;
+        }
+        final int strLen = seq.length();
+        for (int i = 0; i < strLen; i++) {
+            if (Character.isWhitespace(seq.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

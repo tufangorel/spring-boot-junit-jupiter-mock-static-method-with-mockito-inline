@@ -52,4 +52,23 @@ public class StringUtilsTest {
         assertNotEquals("ABC", StringUtils.capitalize("abc"));
     }
 
+    @Test
+    void testContainsWhitespace() {
+
+        // before mock scope, usual behavior.
+        assertEquals(true, StringUtils.containsWhitespace("ab c"));
+
+        // Mock scope
+        try (MockedStatic mocked = mockStatic(StringUtils.class)) {
+
+            // Mocking
+            mocked.when(() -> StringUtils.containsWhitespace("ab c")).thenReturn(true);
+
+            // Mocked behavior
+            assertEquals(true, StringUtils.containsWhitespace("ab c"));
+        }
+
+        // After mock scope returns to usual behavior.
+        assertNotEquals(false, StringUtils.containsWhitespace("ab c"));
+    }
 }
