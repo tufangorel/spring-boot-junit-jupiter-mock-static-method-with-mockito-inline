@@ -18,7 +18,7 @@ public class StringUtilsTest {
         assertEquals(false, StringUtils.isEmpty("abc"));
 
         // Mock scope
-        try (MockedStatic mocked = mockStatic(StringUtils.class)) {
+        try (MockedStatic<StringUtils> mocked = mockStatic(StringUtils.class)) {
 
             // Mocking
             mocked.when(() -> StringUtils.isEmpty(anyString())).thenReturn(false);
@@ -39,7 +39,7 @@ public class StringUtilsTest {
         assertEquals("Abc", StringUtils.capitalize("abc"));
 
         // Mock scope
-        try (MockedStatic mocked = mockStatic(StringUtils.class)) {
+        try (MockedStatic<StringUtils> mocked = mockStatic(StringUtils.class)) {
 
             // Mocking
             mocked.when(() -> StringUtils.capitalize("abc")).thenReturn("Abc");
@@ -59,7 +59,7 @@ public class StringUtilsTest {
         assertEquals(true, StringUtils.containsWhitespace("ab c"));
 
         // Mock scope
-        try (MockedStatic mocked = mockStatic(StringUtils.class)) {
+        try (MockedStatic<StringUtils> mocked = mockStatic(StringUtils.class)) {
 
             // Mocking
             mocked.when(() -> StringUtils.containsWhitespace("ab c")).thenReturn(true);
